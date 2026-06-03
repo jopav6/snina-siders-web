@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Snina Siders — Black & Gold theme (shadcn tokens, Tailwind v4)     */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --radius: 0.625rem;
+
+  --background: #0a0a0b;
+  --foreground: #f2ecdd;
+
+  --card: #121215;
+  --card-foreground: #f2ecdd;
+
+  --popover: #121215;
+  --popover-foreground: #f2ecdd;
+
+  /* Gold */
+  --primary: #c9a24b;
+  --primary-foreground: #0a0a0b;
+
+  --secondary: #1b1b1f;
+  --secondary-foreground: #f2ecdd;
+
+  --muted: #16161a;
+  --muted-foreground: #a39b88;
+
+  --accent: #1b1b1f;
+  --accent-foreground: #f4e4b8;
+
+  --destructive: #b3261e;
+  --destructive-foreground: #f2ecdd;
+
+  --border: #26262b;
+  --input: #2a2a30;
+  --ring: #c9a24b;
+
+  /* Brand helpers */
+  --gold: #c9a24b;
+  --gold-bright: #e3c887;
+  --gold-deep: #a9802f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-gold: var(--gold);
+  --color-gold-bright: var(--gold-bright);
+  --color-gold-deep: var(--gold-deep);
+
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-manrope);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--gold);
+  color: #1b1408;
+}
+
+/* Hairline helpers */
+.hairline {
+  border-color: rgba(201, 162, 75, 0.18);
+}
+
+/* Subtle blueprint texture for light-on-dark sections */
+.blueprint {
+  background-image:
+    linear-gradient(rgba(201, 162, 75, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 162, 75, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Duotone photo placeholders (swap with real <img>) */
+.photo-ph {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 80% 10%, rgba(201, 162, 75, 0.22), transparent 60%),
+    linear-gradient(135deg, #1c1c20 0%, #0e0e10 60%, #08080a 100%);
+}
+.photo-ph::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(201, 162, 75, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 162, 75, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Marquee */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.marquee-wrap:hover .marquee {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -90,6 +90,8 @@ export type BeforeAfterPair = {
   fit?: "cover" | "contain";
 };
 export const beforeAfterPairs: BeforeAfterPair[] = [
+  { before: f("4005"), after: f("4315"), caption: "Whole-home exterior transformation" },
+  { before: f("4389"), after: f("0752"), caption: "Hillside pool & deck", fit: "contain" },
   { before: f("0631"), after: f("0652"), caption: "Backyard composite deck" },
   { before: f("4655"), after: f("4668"), caption: "New patio doors & siding" },
   { before: f("5145"), after: f("5167"), caption: "Elevated deck & paver patio" },
@@ -98,8 +100,6 @@ export const beforeAfterPairs: BeforeAfterPair[] = [
   { before: f("3800"), after: f("0464"), caption: "Custom staircase & wainscoting", fit: "contain" },
   { before: f("1265"), after: f("1272"), caption: "New skylight installation" },
   { before: f("0143"), after: f("1081"), caption: "Commercial space buildout", fit: "contain" },
-  { before: f("4005"), after: f("4315"), caption: "Whole-home exterior transformation" },
-  { before: f("4389"), after: f("0752"), caption: "Hillside pool & deck", fit: "contain" },
 ];
 
 /** File ids to hide from the Our Work gallery (e.g. "before" photos moved to the slider). */

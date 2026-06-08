@@ -34,7 +34,7 @@ const groups: Record<string, { finished: string[]; during: string[] }> = {
     during: ["3080", "3560", "2811", "1557", "1558", "0326", "0327", "0328", "0664", "1081"],
   },
   bathroom: {
-    finished: ["3962", "3289", "3492", "3288", "3944", "6242", "5365", "5366"],
+    finished: ["3962", "3289", "3492", "3288", "3944", "6242", "5365", "5366", "4033", "4034"],
     during: [],
   },
   deck: {
@@ -100,7 +100,9 @@ export const beforeAfterPairs: BeforeAfterPair[] = [
   { before: f("3800"), after: f("0464"), caption: "Custom staircase & wainscoting", fit: "contain" },
   { before: f("1265"), after: f("1272"), caption: "New skylight installation" },
   { before: f("0143"), after: f("1081"), caption: "Commercial space buildout", fit: "contain" },
+  { before: f("6345"), after: f("4033"), caption: "Bright bathroom remodel", fit: "contain" },
+  { before: f("6342"), after: f("4034"), caption: "Walk-in shower remodel", fit: "contain" },
 ];
 
 /** File ids to hide from the Our Work gallery (e.g. "before" photos moved to the slider). */
-export const hiddenFromGallery: string[] = ["0631", "4655", "5145", "2245", "1501", "3800", "1373", "1265", "0143", "4005", "4389"];
+export const hiddenFromGallery: string[] = ["0631", "4655", "5145", "2245", "1501", "3800", "1373", "1265", "0143", "4005", "4389", "6345", "6342"];
